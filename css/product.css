@@ -3,6 +3,7 @@
     max-width: 1500px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .contain_wrap {
@@ -52,22 +53,35 @@
     opacity: 0;
 }
 
+.contain_txt_box {
+    font-size: 14px;
+}
+
 .conatain_img1:hover .contain_img2 {
     opacity: 1;
 }
 
-.contain_box {
+.contain_wrap>a {
     width: calc((100% - 200px)/3);
     height: 600px;
-    background-color: antiquewhite;
     margin: 0 100px 50px 0;
 }
 
-.contain_box:nth-child(3n) {
+.contain_wrap>a:nth-child(3n) {
     margin: 0 0 50px 0;
 }
+
+.contain_box {
+    width: 100%;
+
+    background-color: antiquewhite;
+
+}
+
+
 
 .contain_txt_box {
     display: flex;
     justify-content: space-between;
+    height: 50px;
 }
