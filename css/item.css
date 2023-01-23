@@ -27,7 +27,7 @@
     width: calc(100% - 410px);
     margin-right: 20px;
     min-height: 100vh;
-    height: 5000px;
+    /* height: 5000px; */
     background-color: bisque;
 }
 
@@ -302,4 +302,14 @@ td {
 .btn_price_delete {
     margin: 7px 5px;
     vertical-align: middle;
+}
+
+.item_img_box {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.itme_img_box img {
+    width: 100%;
 }

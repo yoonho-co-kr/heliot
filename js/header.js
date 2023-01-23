@@ -19,17 +19,7 @@ $(document).ready(function () {
                         </ul>
                     </div>
                 </li>
-                <li>NEW ARRIVALS</li>
-                <li>COLLECTION
-                    <div class="sub_menu">
-                        <ul>
-                            <li>2022 S/S COLLECTION</li>
-                            <li>2022 F/W COLLECTION</li>
-                        </ul>
-                    </div>
-                </li>
                 <li>ABOUT US</li>
-                <li>NEWS</li>
             </ul>
             <ul class="logo_sec">
                 <li><a href="index.html">
@@ -39,21 +29,57 @@ $(document).ready(function () {
                 </li>
             </ul>
             <ul class="account_sec">
-                <li>COMMUNITY
-                    <div class="sub_menu">
-                        <ul>
-                            <li>NOTICE</li>
-                            <li>REVIEW</li>
-                            <li>Q&A</li>
-                        </ul>
-                    </div>
-                </li>
                 <li>ACCOUNT</li>
-                <li>MY PAGE</li>
-                <li>SEARCH</li>
-                <li>BAG</li>
             </ul>
         </div>`
+    // let make_header = `<div class="header_wrap">
+    //         <ul class="menu_sec">
+    //             <li>STORE
+    //                 <div class="sub_menu">
+    //                     <ul>
+    //                         <li><a href="./product.html">OUTERWEAR</a></li>
+    //                         <li><a href="./product.html">TOP</a></li>
+    //                         <li><a href="./product.html">BOTTOM</a></li>
+    //                         <li><a href="./product.html">DRESS SKIRT</a></li>
+    //                         <li><a href="./product.html">ACCESSORIES</a></li>
+    //                     </ul>
+    //                 </div>
+    //             </li>
+    //             <li>NEW ARRIVALS</li>
+    //             <li>COLLECTION
+    //                 <div class="sub_menu">
+    //                     <ul>
+    //                         <li>2022 S/S COLLECTION</li>
+    //                         <li>2022 F/W COLLECTION</li>
+    //                     </ul>
+    //                 </div>
+    //             </li>
+    //             <li>ABOUT US</li>
+    //             <li>NEWS</li>
+    //         </ul>
+    //         <ul class="logo_sec">
+    //             <li><a href="index.html">
+    //                 <img src="https://cdn.shopify.com/s/files/1/0185/6238/t/25/assets/logo-new.svg?v=93111652546430656431668080501"
+    //                     alt="">
+    //                     </a>
+    //             </li>
+    //         </ul>
+    //         <ul class="account_sec">
+    //             <li>COMMUNITY
+    //                 <div class="sub_menu">
+    //                     <ul>
+    //                         <li>NOTICE</li>
+    //                         <li>REVIEW</li>
+    //                         <li>Q&A</li>
+    //                     </ul>
+    //                 </div>
+    //             </li>
+    //             <li>ACCOUNT</li>
+    //             <li>MY PAGE</li>
+    //             <li>SEARCH</li>
+    //             <li>BAG</li>
+    //         </ul>
+    //     </div>`
     $("header").append(make_header)
 
     let make_footer = `<div class="footer1">

@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    for (let i = 0; i < 12; i++) {
-        let put_contain = `<a href="./item.html"><div class="contain_box">
+    for (let i = 1; i <= 15; i++) {
+        let put_contain = `<div class="contain_box">
                 <div class="contain_img_box">
-                    <div class="contain_img1">PICTURE</div>
-                    <div class="contain_img2"></div>
+                    <div class="contain_img1"><img src="./img/product/product${i}-1.webp"></div>
+                    <div class="contain_img2"><img src="./img/product/product${i}-2.webp"></div>
                 </div>
                 <div class="contain_txt_box">
                     <div class="contain_txt1">HERE GOES NAME</div>
                     <div class="contain_txt2">999,999원</div>
                 </div>
-            </div></a>`
+            </div>`
         $(".contain_wrap").append(put_contain);
     }
     // console.log($(".photo").length)
@@ -19,18 +19,18 @@ $(document).ready(function () {
         let footer_top = $('footer').offset().top;
 
         if (count < 4 && scroll_bottom >= footer_top) {
-            for (let i = 0; i < 3; i++) {
+            for (let i = 1; i <= 3; i++) {
                 // $('.container').append(`<li class="item"></li>`)
-                $(`<a href="./item.html"><div class="contain_box">
+                $(`<div class="contain_box">
                 <div class="contain_img_box">
-                    <div class="contain_img1">PICTURE</div>
-                    <div class="contain_img2"></div>
+                    <div class="contain_img1"><img src="./img/product/product${i}-1.webp"></div>
+                    <div class="contain_img2">src="./img/product/product${i}-2.webp"></div>
                 </div>
                 <div class="contain_txt_box">
                     <div class="contain_txt1">HERE GOES NAME</div>
                     <div class="contain_txt2">999,999원</div>
                 </div>
-            </div></a>`).appendTo('.contain_wrap')
+            </div>`).appendTo('.contain_wrap')
             }
             count += 1;
             // photo_click()
@@ -45,5 +45,22 @@ $(document).ready(function () {
                 })
             })
         }
+    })
+
+    $(".contain_box").click(function () {
+        $(location).attr("href", "item.html")
+    })
+    $(".contain_box").mouseenter(function () {
+        $(".contain_txt_box").css({
+            opacity: "0"
+        })
+        $(this).find($(".contain_txt_box")).css({
+            opacity: "1"
+        })
+    })
+    $(".contain_box").mouseleave(function () {
+        $(".contain_txt_box").css({
+            opacity: "0"
+        })
     })
 })

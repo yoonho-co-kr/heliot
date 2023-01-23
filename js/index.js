@@ -37,7 +37,7 @@ $(document).ready(function () {
         return false;
     });
     for (let i = 0; i < 6; i++) {
-        let make_banner = `<div class="swiper-slide">
+        let make_banner = `<div class="swiper-slide banner">
             <img src="./img/banner/banner${i}.webp" />
         </div>`
         $(".main_banner .swiper-wrapper").append(make_banner);
@@ -55,4 +55,7 @@ $(document).ready(function () {
                     </div>`
         $(".per_banner .swiper-wrapper").append(make_slider)
     }
+    $(".slide_cover").click(function () {
+        $(location).attr("href", "item.html")
+    })
 })

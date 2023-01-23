@@ -25,30 +25,34 @@ $(document).ready(function () {
             fontWeight: "700"
         })
     })
-    let left_height = $(".left").height();
-    let right_height = 620;
-    $(window).scroll(function () {
-        let scrollTop = $(window).scrollTop()
-        let footer_top = $('footer').offset().top;
-        let scroll_bottom = $(window).scrollTop() + $(window).height()
-        if (scrollTop > 0) {
-            $(".right").css({
-                position: "relative"
-            })
-            $(".item_desc_box").css({
-                position: "fixed",
-                top: "180px"
-            })
 
-            if (scroll_bottom >= footer_top) {
-                $(".item_desc_box").css({
-                    position: "absolute",
-                    top: left_height - right_height,
-                    // bottom: "0px"
+    $(".item_img_box img").on('load', function () {
+        let left_height = $(".item_img_box").height();
+        let right_height = 620;
+        $(window).scroll(function () {
+            let scrollTop = $(window).scrollTop()
+            let footer_top = $('footer').offset().top;
+            let scroll_bottom = $(window).scrollTop() + $(window).height()
+            // console.log(left_height)
+            if (scrollTop > 0) {
+                $(".right").css({
+                    position: "relative"
                 })
+                $(".item_desc_box").css({
+                    position: "fixed",
+                    top: "180px"
+                })
+
+                if (scroll_bottom >= footer_top) {
+                    $(".item_desc_box").css({
+                        position: "absolute",
+                        top: left_height - right_height,
+                        // bottom: "0px"
+                    })
+                }
             }
-        }
-    })
+        })
+    });
     let name = ["Top in Cashmere"]
     let load_color = ["white", "black",]
     let load_size = ["s", "m", "l"]
@@ -59,8 +63,7 @@ $(document).ready(function () {
             backgroundColor: `${load_color[i]}`,
         })
     }
-    if (left_height)
-        console.log()
+
     // for (let i = 0; i < load_size.length; i++) {
     //     let put_size = `<div class="${load_size[i]} size">${load_size[i].toUpperCase()}</div>`
     //     $(".val_size").append(put_size)
