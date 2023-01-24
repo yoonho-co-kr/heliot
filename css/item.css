@@ -313,3 +313,20 @@ td {
 .itme_img_box img {
     width: 100%;
 }
+
+@media screen and (max-width: 1000px) {
+    .left {
+        float: none;
+        width: 100%;
+    }
+
+    .right {
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .item_desc_box {
+        width: 100%;
+    }
+}

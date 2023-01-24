@@ -7,7 +7,13 @@ $(document).ready(function () {
 
     })
     let make_header = `<div class="header_wrap">
+            <ul class="burger_box">
+                <li class="line" id="line_top"></li>
+                <li class="line" id="line_mid"></li>
+                <li class="line" id="line_bot"></li>
+            </ul>
             <ul class="menu_sec">
+            
                 <li>STORE
                     <div class="sub_menu">
                         <ul>
@@ -29,9 +35,25 @@ $(document).ready(function () {
                 </li>
             </ul>
             <ul class="account_sec">
-                <li>ACCOUNT</li>
+                <li class="go_login">ACCOUNT</li>
             </ul>
-        </div>`
+            <div class="empty_box"></div>
+                
+        </div>
+        <div class="phone_menu">
+        <div class="phone_store">
+            <div class="phone_store_title">STORE</div>
+            <div><a href="./product.html">OUTERWEAR</a></div>
+            <div><a href="./product.html">TOP</a></div>
+            <div><a href="./product.html">BOTTOM</a></div>
+            <div><a href="./product.html">DRESS SKIRT</a></div>
+            <div><a href="./product.html">ACCESSORIES</a></div>
+        </div>
+        <div class="phone_account">
+            <div class="account">ACCOUNT</div>
+        </div>
+        <div class="close_btn">CLOSE</div>
+    </div>`
     // let make_header = `<div class="header_wrap">
     //         <ul class="menu_sec">
     //             <li>STORE
@@ -133,6 +155,36 @@ $(document).ready(function () {
             display: "none"
         })
     })
+    $(".go_login, .account").click(function () {
+        $(location).attr("href", "login.html")
+    })
+    let burger_on_check = false;
+    $(".burger_box").click(function () {
+        if (burger_on_check == false) {
+            $(".phone_menu").css({
+                transform: "translate(0, 0)",
+                boxShadow: "9px 1px 70px -8px rgba(0, 0, 0, 0.75)"
+            })
+            burger_on_check = true;
+            $(".overwrap").css({
+                display: "block",
+                opacity: "1"
+            })
+        }
 
+    })
+    $(".close_btn").click(function () {
+        if (burger_on_check == true) {
+            $(".phone_menu").css({
+                transform: "translate(-100%, 0)",
+                boxShadow: "none"
+            })
+            burger_on_check = false;
+            $(".overwrap").css({
+                display: "none",
+                opacity: "0"
+            })
+        }
+    })
 
 })

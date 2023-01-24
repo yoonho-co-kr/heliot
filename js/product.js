@@ -24,7 +24,7 @@ $(document).ready(function () {
                 $(`<div class="contain_box">
                 <div class="contain_img_box">
                     <div class="contain_img1"><img src="./img/product/product${i}-1.webp"></div>
-                    <div class="contain_img2">src="./img/product/product${i}-2.webp"></div>
+                    <div class="contain_img2"><img src="./img/product/product${i}-2.webp"></div>
                 </div>
                 <div class="contain_txt_box">
                     <div class="contain_txt1">HERE GOES NAME</div>
@@ -33,34 +33,26 @@ $(document).ready(function () {
             </div>`).appendTo('.contain_wrap')
             }
             count += 1;
-            // photo_click()
-            $(".photo").mouseenter(function () {
-                $(this).children().css({
-                    scale: "1.2"
-                })
-            })
-            $(".photo").mouseleave(function () {
-                $(".photo").children().css({
-                    scale: "1"
-                })
-            })
+            item_txt_effect()
         }
     })
-
-    $(".contain_box").click(function () {
-        $(location).attr("href", "item.html")
-    })
-    $(".contain_box").mouseenter(function () {
-        $(".contain_txt_box").css({
-            opacity: "0"
+    item_txt_effect()
+    function item_txt_effect() {
+        $(".contain_box").click(function () {
+            $(location).attr("href", "item.html")
         })
-        $(this).find($(".contain_txt_box")).css({
-            opacity: "1"
+        $(".contain_box").mouseenter(function () {
+            $(".contain_txt_box").css({
+                opacity: "0"
+            })
+            $(this).find($(".contain_txt_box")).css({
+                opacity: "1"
+            })
         })
-    })
-    $(".contain_box").mouseleave(function () {
-        $(".contain_txt_box").css({
-            opacity: "0"
+        $(".contain_box").mouseleave(function () {
+            $(".contain_txt_box").css({
+                opacity: "0"
+            })
         })
-    })
+    }
 })

@@ -25,34 +25,43 @@ $(document).ready(function () {
             fontWeight: "700"
         })
     })
+    responsive_desc_sec();
+    $(window).resize(function () {
+        responsive_desc_sec();
+    })
+    function responsive_desc_sec() {
 
-    $(".item_img_box img").on('load', function () {
-        let left_height = $(".item_img_box").height();
-        let right_height = 620;
-        $(window).scroll(function () {
-            let scrollTop = $(window).scrollTop()
-            let footer_top = $('footer').offset().top;
-            let scroll_bottom = $(window).scrollTop() + $(window).height()
-            // console.log(left_height)
-            if (scrollTop > 0) {
-                $(".right").css({
-                    position: "relative"
-                })
-                $(".item_desc_box").css({
-                    position: "fixed",
-                    top: "180px"
-                })
 
-                if (scroll_bottom >= footer_top) {
-                    $(".item_desc_box").css({
-                        position: "absolute",
-                        top: left_height - right_height,
-                        // bottom: "0px"
-                    })
-                }
-            }
-        })
-    });
+        if (window.innerWidth > 1000) {
+            $(".item_img_box img").on('load', function () {
+                let left_height = $(".item_img_box").height();
+                let right_height = 620;
+                $(window).scroll(function () {
+                    let scrollTop = $(window).scrollTop()
+                    let footer_top = $('footer').offset().top;
+                    let scroll_bottom = $(window).scrollTop() + $(window).height()
+                    // console.log(left_height)
+                    if (scrollTop > 0) {
+                        $(".right").css({
+                            position: "relative"
+                        })
+                        $(".item_desc_box").css({
+                            position: "fixed",
+                            top: "180px"
+                        })
+
+                        if (scroll_bottom >= footer_top) {
+                            $(".item_desc_box").css({
+                                position: "absolute",
+                                top: left_height - right_height,
+                                // bottom: "0px"
+                            })
+                        }
+                    }
+                })
+            });
+        }
+    }
     let name = ["Top in Cashmere"]
     let load_color = ["white", "black",]
     let load_size = ["s", "m", "l"]

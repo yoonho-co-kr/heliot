@@ -80,7 +80,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     display: none;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(11.5px);
     -webkit-backdrop-filter: blur(11.5px);
 }
@@ -113,4 +113,150 @@ footer div ul li {
 .footer3 {
     flex: 2;
     text-align: right;
+}
+
+.burger_box {
+    display: none;
+}
+
+.phone_menu {
+    display: none;
+    /* box-shadow: 9px 1px 70px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 9px 1px 70px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 1px 70px -8px rgba(0, 0, 0, 0.75); */
+}
+
+@media screen and (max-width: 1000px) {
+    .account_sec {
+        display: none;
+    }
+
+    .phone_menu {
+        display: block;
+    }
+
+    .header_wrap {
+        align-items: center;
+    }
+
+    .menu_sec {
+        display: none;
+    }
+
+    .burger_box {
+        display: block;
+        width: 30px;
+        height: 30px;
+        /* background-color: aqua; */
+    }
+
+    .empty_box {
+        width: 30px;
+        height: 30px;
+        /* background-color: aqua; */
+    }
+
+    .line {
+        border: 0.5px solid black;
+        margin: 6px 0;
+    }
+
+    .phone_menu {
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999999;
+        padding: 100px 20px;
+        font-size: 14px;
+        box-sizing: border-box;
+        background-color: white;
+        transform: translate(-100%, 0);
+        transition: transform 0.3s;
+    }
+
+    .phone_store>.phone_store_title {
+        font-weight: 700;
+        margin: 0 0 30px;
+    }
+
+    .phone_store>div {
+        margin: 0 0 10px;
+    }
+
+    .phone_store {
+        margin: 0 0 300px;
+    }
+
+    .close_btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 9999999;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .footer1 {
+        flex: content;
+    }
+
+    .footer2 {
+        flex: content;
+    }
+
+    .footer3 {
+        flex: content;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header_wrap {
+        padding: 50px 20px 0;
+    }
+
+    footer {
+
+        padding: 120px 20px 20px;
+
+    }
+
+    .logo_sec {
+        width: 200px;
+        flex: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .burger_box {
+        display: block;
+        width: 20px;
+        height: 20px;
+        /* background-color: aqua; */
+    }
+
+    .line {
+        border: 0.3px solid black;
+        margin: 3px 0;
+    }
+
+    .phone_menu {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .logo_sec {
+        width: 150px;
+        flex: none;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 60px 20px 20px;
+    }
 }
