@@ -260,3 +260,13 @@ footer div ul li {
         padding: 60px 20px 20px;
     }
 }
+
+@media screen and (max-height:520px) {
+    .phone_menu {
+        padding: 50px 20px;
+    }
+
+    .phone_store {
+        margin: 0 0 100px;
+    }
+}
