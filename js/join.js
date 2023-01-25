@@ -18,7 +18,7 @@ $(document).ready(function () {
         }
     }
     )
-    $(".login").click(function () {
+    $(".login, #login_btn").click(function () {
         $(location).attr("href", "login.html")
     })
     $(".join").click(function () {

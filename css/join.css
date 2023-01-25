@@ -99,3 +99,9 @@ input {
     margin-bottom: 20px;
     font-weight: 400;
 }
+
+@media screen and (max-width: 450px) {
+    .join_box {
+        width: 100%;
+    }
+}
