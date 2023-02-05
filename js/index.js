@@ -59,7 +59,12 @@ $(document).ready(function () {
     $(".slide_cover").click(function () {
         $(location).attr("href", "item.html")
     })
-
+    $(".slide_cover").click(function () {
+        $(location).attr("href", "item.html")
+    })
+    $(".main_banner, .b_thumb, .second_sec").click(function () {
+        $(location).attr("href", "item.html")
+    })
 
     let ww = window.innerWidth
     function resposiveSwiper() {

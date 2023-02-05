@@ -198,6 +198,11 @@
     opacity: 0;
     transition: all 0.3s;
 } */
+.main_banner,
+.b_thumb,
+.second_sec {
+    cursor: pointer;
+}
 
 @media screen and (max-width: 1000px) {
     .notice_window {
